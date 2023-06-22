@@ -68,6 +68,10 @@
             return hostName.substring(hostName.lastIndexOf(".", hostName.lastIndexOf(".") - 1) + 1);
         }
 
+        function getReferralFinal() {
+            return savedReferral;
+        }
+
         var referral = getReferralFromUrl();
         var savedReferral = Cookies.get('referral');
 
@@ -80,7 +84,8 @@
         }
 
         if (savedReferral && savedReferral.length > 0) {
-            document.getElementById("buttonStart").href += "?start=" + savedReferral
+            var refFinal = getReferralFinal();
+            document.getElementById("buttonStart").href += "?start=" + refFinal;
         }
 
     </script>
