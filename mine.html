@@ -69,12 +69,24 @@
             return hostName.substring(hostName.lastIndexOf(".", hostName.lastIndexOf(".") - 1) + 1);
         }
 
-        function getReferralFinal() {
-            var ref = savedReferral;
+        function initStartButton() {
             if (savedReferral.startsWith("3A")) {
-                console.log("aaaaaaaa");
+                getTelFromAddress();
+            } else {
+                createStartButton(savedReferral);
             }
-            return ref;
+        }
+
+        function getTelFromAddress(address) {
+            $.getJSON('https://mobile.anote.digital/miner/' + address, function(data) {
+                if (data.telegram_id != 0) {
+                    createStartButton(data.telegram_id);
+                }
+            });
+        }
+
+        function createStartButton(refFinal) {
+            document.getElementById("buttonStart").href += "?start=" + refFinal;
         }
 
         var referral = getReferralFromUrl();
@@ -89,8 +101,7 @@
         }
 
         if (savedReferral && savedReferral.length > 0) {
-            var refFinal = getReferralFinal();
-            document.getElementById("buttonStart").href += "?start=" + refFinal;
+            initStartButton(savedReferral);            
         }
 
     </script>
