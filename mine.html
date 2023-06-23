@@ -71,7 +71,7 @@
 
         function initStartButton() {
             if (savedReferral.startsWith("3A")) {
-                getTelFromAddress();
+                getTelFromAddress(savedReferral);
             } else {
                 createStartButton(savedReferral);
             }
