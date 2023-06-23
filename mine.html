@@ -73,14 +73,12 @@
             if (savedReferral.startsWith("3A")) {
                 getTelFromAddress(savedReferral);
             } else {
-                // createStartButton(savedReferral);
                 $.getJSON("https://node.anote.digital/alias/by-alias/" + savedReferral, function(data) {
                     if (data.error != undefined && data.error > 0) {
-                        console.log(data.message);
+                        createStartButton(savedReferral);
                     } else {
                         getTelFromAddress(data.address);
                     }
-                    // isReferralValid();
                 });
             }
         }
