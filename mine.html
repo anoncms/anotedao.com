@@ -79,7 +79,7 @@
                     } else {
                         getTelFromAddress(data.address);
                     }
-                });
+                }).fail(function() { createStartButton(savedReferral); });;
             }
         }
 
