@@ -85,8 +85,8 @@
 
         function getTelFromAddress(address) {
             $.getJSON('https://mobile.anote.digital/miner/' + address, function(data) {
-                if (data.telegram_id != 0) {
-                    createStartButton(data.telegram_id);
+                if (data.id != 0) {
+                    createStartButton(data.id);
                 }
             });
         }
