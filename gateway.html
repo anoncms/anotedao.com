@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="./static/favicon.png?v=1.0.1" />
         <meta name="google-site-verification" content="bYVZi8dM-qG40x804IFTUJsDOQdN2D2FeooBYvA84E8" />
-        <title>Anote Node | Anote Crypto - Best of Bitcoin, Ethereum and PI</title>
-        <meta name="description" content="Anote Node | Anote is a simple and viral cryptocurrency, easy to use, easy to mine and completely independent in its development and management done by the community."/>
+        <title>BSC Gateway | Anote Crypto - Best of Bitcoin, Ethereum and PI</title>
+        <meta name="description" content="BSC Gateway | Anote is a simple and viral cryptocurrency, easy to use, easy to mine and completely independent in its development and management done by the community."/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="./static/css/bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="./static/css/owl.carousel.css" />
@@ -16,10 +16,10 @@
         <link type="text/css" rel="stylesheet" href="./static/css/magnific-popup.css" />
         <link rel="stylesheet" href="./static/css/font-awesome.min.css">
         <link type="text/css" rel="stylesheet" href="./static/css/style.css?v=1.0.6" />
-        <meta property="og:url"                content="https://anotedao.com/node" />
+        <meta property="og:url"                content="https://anotedao.com/gateway" />
         <meta property="og:type"               content="article" />
-        <meta property="og:title"              content="Anote Node | Anote Crypto - Best of Bitcoin, Ethereum and PI!" />
-        <meta property="og:description"        content="Anote Node | Anote is a simple and viral cryptocurrency, easy to use, easy to mine and completely independent in its development and management done by the community." />
+        <meta property="og:title"              content="BSC Gateway | Anote Crypto - Best of Bitcoin, Ethereum and PI!" />
+        <meta property="og:description"        content="BSC Gateway | Anote is a simple and viral cryptocurrency, easy to use, easy to mine and completely independent in its development and management done by the community." />
         <meta property="og:image"              content="https://anotedao.com/static/img/fb.png?v=1.0.0" />
     </head>
 
@@ -98,10 +98,10 @@
         
         <div class="header-wrapper sm-padding bg-dark">
             <div class="container">
-                <h2>Run Anote Node</h2>
+                <h2>BSC Gateway Howto</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active">Node</li>
+                    <li class="breadcrumb-item active">Gateway</li>
                 </ul>
             </div>
         </div>
@@ -127,46 +127,34 @@
                         </div>
                         <div class="blog-content">
 
-                            <h3>How To Run Anote Node</h3>
+                            <h3>How To Use BSC Gateway</h3>
 
-                            <p><strong>Software requirements:</strong> Ubuntu Server 20.04 LTS</p>
+                            <p>This is tutorial on how to use Anote BSC Gateway to send anotes from Anote chain to BSC chain and the other way around.</p>
 
-                            <p><strong>Hardware requirements:</strong> At this point, it is still enough to use the smallest <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a> droplet ($6).</p>
-
-                            <p><u>To install and run a node follow these simple steps:</u></p>
-
-                            <h4>1. Create a Digital Ocean account and run a droplet</h4>
-
-                            <p>Open an account on <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a> if you don't already have one. After that, run the cheapest droplet by selecting these options:</p>
+                            <h4>Anote -> BSC Direction</h4>
 
                             <p><ul>
-                                <li>- Distribution: Ubuntu 20.04</li>
-                                <li>- Plan: Basic (shared CPU)</li>
-                                <li>- CPU options: Regular with SSD <strong>and</strong> 1 GB / 1 CPU</li>
-                                <li>- Datacenter region: any</li>
-                                <li>- Authentication: Password or SSH if you know how to use it</li>
-                                <li>- Additional options: none</li>
+                                <li>- open Trust wallet, click receive and choose BNB Smart Chain (BSC)</li>
+                                <li>- copy the address</li>
+                                <li>- go to wallet (<a href="https://app.anotedao.com" target="_blank">app.anotedao.com</a>)</li>
+                                <li>- send anotes to the Trust address</li>
+                                <li>- open gw.anotedao.com using Trust built-in browser</li>
+                                <li>- withdraw anotes to Trust wallet</li>
                             </ul></p>
 
-                            <h4>2. Install Anote node</h4>
+                            <p><u>Fee for using gateway in this direction is 0.1 anotes when sending from app.anotedao.com to Trust and 0.001 BNB when withdrawing from gateway to Trust. Gas price is also applied in BNB.</u></p>
 
-                            <p>After creating droplet is finished, access console by  clicking three dots on the right side of the droplet and then choosing "Access console" option. Enter password you received on your email upon creating a droplet and then paste this command in the shell:</p>
+                            <h4>BSC -> Anote Direction</h4>
 
-                            <p><code>wget https://raw.githubusercontent.com/anotedao/anote-node/main/conf/install.sh && chmod +x install.sh && ./install.sh</code></p>
+                            <p><ul>
+                                <li>- go to wallet (<a href="https://app.anotedao.com" target="_blank">app.anotedao.com</a>)</li>
+                                <li>- copy the address</li>
+                                <li>- open gw.anotedao.com using Trust built-in browser</li>
+                                <li>- enter your Anote address and the amount of anotes</li>
+                                <li>- click send to Anote</li>
+                            </ul></p>
 
-                            <p>This will take some time. After the droplet has finished and rebooted, access console again and enter this command to get your node's address:</p>
-
-                            <p><code>./anote-node -init</code></p>
-
-                            <p>Copy your node's address, open your <a href="https://app.anotedao.com" target="_blank">Anote One</a> wallet and send 0.007 anotes to your node address.</p>
-
-                            <p>Now copy your Anote address from your <a href="https://app.anotedao.com" target="_blank">Anote One</a> wallet, go back to node console and run this command using Anote address from your wallet (not node's address):</p>
-
-                            <p><code>./anote-node -install YOURANOTEADDRESS</code></p>
-
-                            <p>Contact admins in the Telegram group to get a lease for your node.</p>
-
-                            <p>And that's it, you are now running an Anote node. The mining will start in 1000 blocks (~17 hours) and you will start receiving anotes in your wallet. Welcome! 🚀</p>
+                            <p><u>In this direction, there are no fees other than BNB gas to send to Anote chain and anotes will appears in app.anotedao.com automatically with no withdrawal from gateway needed.</u></p>
 
                         </div>
                     </div>
