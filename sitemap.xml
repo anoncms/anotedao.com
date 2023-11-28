@@ -43,11 +43,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://anotedao.com/downloads</loc>
-  <lastmod>2023-11-14T23:35:52+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://anotedao.com/tutorials</loc>
   <lastmod>2023-11-14T23:35:52+00:00</lastmod>
   <priority>0.80</priority>
@@ -69,11 +64,6 @@
 </url>
 <url>
   <loc>https://anotedao.com/node</loc>
-  <lastmod>2023-11-14T23:35:52+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://anotedao.com/battery</loc>
   <lastmod>2023-11-14T23:35:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
