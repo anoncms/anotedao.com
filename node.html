@@ -133,13 +133,49 @@
                         </div>
                         <div class="blog-content">
 
-                            <h3>How To Run Anote Node</h3>
+                            <h2>How To Run Anote Node</h2>
+
+                            <p><strong>Token requirements:</strong> <a href="/node-token" target="_blank">1 NODE Token</a></p>
 
                             <p><strong>Software requirements:</strong> Ubuntu Server 20.04 LTS</p>
 
-                            <p><strong>Hardware requirements:</strong> At this point, it is still enough to use the smallest <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a> droplet ($6).</p>
+                            <p><strong>Hardware requirements:</strong> At this point, it is still enough to use the smallest <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a> droplet ($6), or your home PC. You can run up to 3 nodes from the same IP address.</p>
 
-                            <p><u>To install and run a node follow these simple steps:</u></p>
+                            <h3 style="margin-top: 40px;"><u>Run Anote Node On Your PC</u></h3>
+
+                            <p><u>To install and run a node on your home PC, follow these simple steps:</u></p>
+
+                            <h4>1. Download and install VirtualBox</h4>
+
+                            <p>Download VirtualBox from <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">here</a> and install it on your computer.</p>
+
+                            <h4>2. Download and import Anote Node image</h4>
+
+                            <p>Download Anote Node image from <a href="https://download.anotedao.com/" target="_blank">here</a> and extract it. After that, open VirtualBox, click "File", then "Import Appliance" and choose extracted node image and import it. Wait for the import to finish.</p>
+
+                            <h4>3. Install Anote Node</h4>
+
+                            <p>Start the newly created appliance called Anote Node in VirtualBox and wait for it to boot. After that, login to it with username 'anote' and password 'anote' and run this command:</p>
+
+                            <p><code>sudo ./install.sh</code></p>
+
+                            <p>There's no copy-paste so you will have to enter it manually. When you enter it, it will ask you for the password agan and it's again 'anote'. Wait for the process to finish. If you don't have alias configured in your <a href="https://app.anotedao.com" target="_blank">wallet</a>, create one in wallet settings.</p>
+
+                            <p>When install command finishes, your node will reboot. Open <a href="https://explorer.anotedao.com/peers" target="_blank">explorer</a> and find your IP in the nodes list. Under node name, you will see its address. Copy it and send 0.007 anotes to that address from your wallet.</p>
+
+                            <p>Go back to your node in VirtualBox and login again using 'anote' for both username and password and run this command:</p>
+
+                            <p><code>./anote-node -install=alias</code></p>
+
+                            <p>Replace the word alias in this command with the alias you configured in your wallet settings.</p>
+                            
+                            <p>Contact admins in the Telegram group to get a lease for your node.</p>
+
+                            <p>And that's it, you are now running an Anote node. The mining will start in 1000 blocks (~17 hours) and you will start receiving anotes in your wallet. Welcome! 🚀</p>
+
+                            <h3 style="margin-top: 40px;"><u>Run Anote Node On Digital Ocean</u></h3>
+
+                            <p><u>To install and run a node on Digital Ocean, follow these simple steps:</u></p>
 
                             <h4>1. Create a Digital Ocean account and run a droplet</h4>
 
